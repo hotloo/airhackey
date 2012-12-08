@@ -3,3 +3,7 @@
 CordovaLib/CordovaLib.xcodeproj/xcuserdata/
 *.sw?
 .DS_Store
+.idea
+atlassian*
+npm-debug.log
+www/js/
