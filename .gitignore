@@ -6,3 +6,4 @@ CordovaLib/CordovaLib.xcodeproj/xcuserdata/
 .idea
 atlassian*
 npm-debug.log
+/www/js/*.js
