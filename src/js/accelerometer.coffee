@@ -4,7 +4,6 @@ onDeviceReady = () ->
 
 startWatch = ->
   option = frequency : 3000
-  watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options)
     
 stopWatch = ->
   if watchID
