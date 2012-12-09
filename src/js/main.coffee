@@ -1,9 +1,10 @@
-app =
+window.app or= {}
 
-  
+class app.Main
+
   # Application Constructor
-  initialize: ->
-    console.log "test"
+  constructor: ->
+    game = new app.Game
     @bindEvents()
 
   
@@ -31,3 +32,4 @@ app =
   #   listeningElement.setAttribute "style", "display:none;"
   #   receivedElement.setAttribute "style", "display:block;"
   #   console.log "Received Event: " + id
+main = new app.Main
