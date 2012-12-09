@@ -2,10 +2,12 @@ window.app or= {}
 
 class app.Game
   constructor: ->
-    alert("before")
-    @accelerometerWatchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, { frequency: 1000 })
+    window.setInterval(@update, 30)
+
+  update: ->
+    navigator.accelerometer.getCurrentAcceleration(@onSuccess, @onError)
+
   onSuccess: (acceleration) ->
-    console.log("raimo")
-    #console.log("Acceleration X: ", acceleration.x, "Acceleration Y: ",  acceleration.y,  "Acceleration Z: ",  acceleration.z,  "Timestamp: ",  acceleration.timestamp)
+    console.log(acceleration.x, acceleration.y)
   onError: ->
     console.log("Fuck shit stack error")
